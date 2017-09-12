@@ -1,0 +1,161 @@
+*{
+  margin: 0;
+}
+body{
+  font-family: Dancing Script;
+  background-color: #02010a;
+  text-align: center;
+}
+.contenidoo{
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  margin: 0 auto;
+}
+@keyframes sliden {
+  0%{margin-top: 150%;}
+  60%{margin-top: -5%;}
+  100%{margin-top: 0%;}
+}
+header{
+  color: white;
+  border-radius: 15px 15px 0 0;
+  webkit-border-radius: 15px 15px 0 0;
+  box-sizing: border-box;
+  width:  100%;
+  float: left;
+  padding: 2%;
+  background-color: #5b7989;
+  animation-name: sliden;
+  animation-duration: 1.2s;
+}
+nav a:link, nav a:visited{
+  color: white;
+}
+nav ul{
+	list-style: none;
+  word-spacing: 10px;
+  line-height: 60px;
+}
+
+header nav li {
+  position: relative;
+  display: inline;
+}
+header h1{
+  text-shadow: 2px 2px 2px #02010a;
+  width: 50%;
+  float: left;
+  text-align: left;
+  font-size: 2.6em;
+}
+header nav{
+  width: 50%;
+  float: right;
+  text-align: right;
+  font-size: 1.5em;
+}
+@media (max-width: 900px) {
+  .contenidoo{width: 100%}
+  header h1{
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+  }
+  header nav{
+    width: 100%;
+    text-align: center;
+    padding: 0px;
+    margin-top: 10px;
+  }
+}
+
+.galeria{
+  background-color: #d5c75f;
+  width: 100%;
+}
+
+.conte1, .conte2{
+  display: flex;
+  width: 100%;
+}
+.im1, .im2, .im3, .im4, .im5, .im6{
+  margin-top: 2.5vw;
+  margin-left: 2.5vw;
+  margin-bottom: 2.5vw;
+  width: 33.33%;
+}
+figure img{
+  box-shadow:  2px 2px 2px #02010a;
+  width: 90%;
+}
+.i1{
+  -webkit-filter: blur(10px);
+}
+.i2, .i4, .i6{
+  -webkit-filter: grayscale(100%);
+}
+.i3{
+  filter: sepia(90%);
+}
+@media (max-width: 900px){
+  .galeria{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .conte1, .conte2{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .im1, .im2, .im3, .im4, .im5, .im6{
+    width: 90%;
+  }
+  figure img{
+    width: 90%;
+  }
+}
+footer{
+  clear: both;
+  background-color: #C6d5c5;
+  border-radius: 0px 0px 15px 15px;
+  webkit-border-radius: 0px 0px 15px 15px;
+  font-size: 1.3em;
+}
+.info{
+  display: flex;
+}
+.cont, .term, .redes, .dere{
+  width: 100%;
+  margin-top: 20px;
+  margin-left: 25px;
+  text-align: left;
+}
+.redes ul{
+  list-style: none;
+  text-align: left;
+}
+/*img[src|='icono']{
+  width: 30px;
+  height: 30px;            NO ME FUNCIONO!!!
+}*/
+footer .info .redes img{
+  margin-left: -5vw;
+  width: 25px;
+  height: 25px;
+}
+.cont a:link{
+  color: black;
+}
+@media (max-width: 900px) {
+  .info{
+    margin-left: 3vw;
+    display: flow-root;
+  }
+  .cont, .term, .redes, .dere{
+    width: 90%;
+    text-align: left;
+    padding: 1vw;
+  }
+}
